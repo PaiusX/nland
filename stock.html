@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>nland back in business</title>
+  <link rel="stylesheet" type="text/css" href="style stock.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @font-face {
+      font-family: 'coolvetica';
+      src: url('fonts/coolvetica.otf') format('opentype');
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><span style="color: red;">Prices:</span>
+        <img src="poze/blood.png" alt="Nland logo" height="200px">
+        <img src="poze/blood2.png" alt="Nland logo" height="150px">
+    </h1>
+    <div class="columns">
+      <div class="column">
+        <h2> <span style="color: rgb(0, 255, 0); font-size: 40px;">Lifetime </span> <span style="font-size: 40px;">Warranty:</span> </h2>
+        <ul>
+          <li>Nitro boost (1 month): $1.8</li>
+          <li>Nitro classic (1 month): $1.4</li>
+          <li>Nitro boost (1 year): $12</li>
+          <li>Nitro classic (1 year): $8</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2> <span style="color: red; font-size: 40px;">No </span> <span style="font-size: 40px;">Warranty:</span> </h2>
+        <ul>
+          <li>Nitro boost (1 month): $1.4</li>
+          <li>Nitro classic (1 month): $1</li>
+          <li>Nitro boost (1 year): $9</li>
+          <li>Nitro classic (1 year): $5</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h3>
+      <span style="color: rgb(21, 255, 0);">Stock:</span>
+      <div id="stock">0</div>
+    </h3>
+  </div>
+  <script>
+    const stock = document.getElementById('stock');
+    const discordLink = 'https://discord.com/invite/myYMS2nTB8';
+
+    function updateStock(num) {
+      if (num === 0) {
+        stock.innerHTML = 'No stock at the moment, join our discord tho: <a href="' + discordLink + '">' + discordLink + '</a>';
+      } else {
+        stock.innerHTML = num + ' nitros in stock, join our discord to buy: <a href="' + discordLink + '">' + discordLink + '</a>';
+      }
+    }
+
+    updateStock(0);
+    
+  </script>
+
+</body>
+</html>
